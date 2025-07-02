@@ -121,7 +121,7 @@
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="SéquencePourPostuler" sap:VirtualizedContainerService.HintSize="755.2,4929.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="SéquencePourPostuler" sap:VirtualizedContainerService.HintSize="881.6000000000001,4899.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Offers" />
       <Variable x:TypeArguments="x:String" Name="MotivationLetterText" />
@@ -134,7 +134,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Sequence to apply to a job being given the scrapped CSV . More specifically :&#xA;1- We begin by reading the CV and the offers csv path&#xA;2- Then we generate the cover letter&#xA;3- For each offer, get the information and the generate the mail using AI&#xA;4- Save the progress in a csv for monitoring" DisplayName="Sequence To Apply to job offer from a CSV" sap:VirtualizedContainerService.HintSize="627.2,4875.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap2010:Annotation.AnnotationText="Sequence to apply to a job being given the scrapped CSV . More specifically :&#xA;1- We begin by reading the CV and the offers csv path&#xA;2- Then we generate the cover letter&#xA;3- For each offer, get the information and the generate the mail using AI&#xA;4- Save the progress in a csv for monitoring" DisplayName="Sequence To Apply to job offer from a CSV" sap:VirtualizedContainerService.HintSize="627.2,4844.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Offers_path" />
         <Variable x:TypeArguments="x:Boolean" Name="CoverLetterGenerated" />
@@ -343,25 +343,25 @@ Le ton doit être professionnel, fluide, sincère et adapté à une candidature 
           <ActivityFunc x:TypeArguments="x:Boolean" />
         </ui:RetryScope.Condition>
       </ui:RetryScope>
-      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="mevaed4@gmail.com" DisplayName="Use Gmail" EmailAddress="mevaed4@gmail.com" sap:VirtualizedContainerService.HintSize="593.6,2617.6" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="mevaed4@gmail.com" DisplayName="Use Gmail" EmailAddress="mevaed4@gmail.com" sap:VirtualizedContainerService.HintSize="593.6,2587.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
         <umab:GmailApplicationCard.Body>
           <ActivityAction x:TypeArguments="um:IMailQuickHandle">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="560,2404" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="560,2373.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Offers]" DisplayName="For Each Offer" sap:VirtualizedContainerService.HintSize="526.4,2344" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Offers]" DisplayName="For Each Offer" sap:VirtualizedContainerService.HintSize="526.4,2313.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Offer" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="524.8,2171.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="524.8,2140.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="Company" />
                         <Variable x:TypeArguments="x:String" Name="Mail" />
@@ -376,7 +376,7 @@ Le ton doit être professionnel, fluide, sincère et adapté à une candidature 
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:MultipleAssign DisplayName="Assign to get the offers infos" sap:VirtualizedContainerService.HintSize="491.2,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <ui:MultipleAssign DisplayName="Assign to get the offers infos" sap:VirtualizedContainerService.HintSize="491.2,274.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                         <ui:MultipleAssign.AssignOperations>
                           <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -393,14 +393,6 @@ Le ton doit être professionnel, fluide, sincère et adapté à une candidature 
                               </ui:AssignOperation.To>
                               <ui:AssignOperation.Value>
                                 <InArgument x:TypeArguments="x:String">[Offer("E-mail").ToString]</InArgument>
-                              </ui:AssignOperation.Value>
-                            </ui:AssignOperation>
-                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
-                              <ui:AssignOperation.To>
-                                <OutArgument x:TypeArguments="x:String">[Fonction]</OutArgument>
-                              </ui:AssignOperation.To>
-                              <ui:AssignOperation.Value>
-                                <InArgument x:TypeArguments="x:String">[Offer("FONCTION / SERVICE").ToString]</InArgument>
                               </ui:AssignOperation.Value>
                             </ui:AssignOperation>
                             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -432,7 +424,7 @@ Le ton doit être professionnel, fluide, sincère et adapté à une candidature 
                       </ui:MultipleAssign>
                       <ui:Replace BuilderPattern="&lt;DATE&gt;" DisplayName="Replace the date placeholde in the cover letter" sap:VirtualizedContainerService.HintSize="491.2,92" sap2010:WorkflowViewState.IdRef="Replace_3" Input="[MotivationLetterText]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Littéral&quot;,&quot;OperationValue&quot;:&quot;&lt;DATE&gt;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactement&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="&lt;DATE&gt;" RegexOption="IgnoreCase, Compiled" Replacement="[TodayDate]" />
                       <ui:Replace BuilderPattern="&lt;DATE&gt;" DisplayName="Replace the company placeholder in the cover letter" sap:VirtualizedContainerService.HintSize="491.2,92" sap2010:WorkflowViewState.IdRef="Replace_4" Input="[MotivationLetterText]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Littéral&quot;,&quot;OperationValue&quot;:&quot;&lt;DATE&gt;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactement&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="&lt;ENTREPRISE&gt;" RegexOption="IgnoreCase, Compiled" Replacement="[Company]" />
-                      <ui:WriteTextFile File="{x:Null}" DisplayName="Save the placeholder in a file" FileName="MotivationLetter.txt" sap:VirtualizedContainerService.HintSize="491.2,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[MotivationLetterText]" />
+                      <ui:WriteTextFile File="{x:Null}" DisplayName="Save the placeholder in a file" FileName="Output\MotivationLetter.txt" sap:VirtualizedContainerService.HintSize="491.2,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[MotivationLetterText]" />
                       <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="491.2,787.2" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:01:00">
                         <ui:RetryScope.ActivityBody>
                           <ActivityAction>
@@ -555,7 +547,7 @@ Le ton doit être professionnel, fluide, sincère et adapté à une candidature 
                         <umab:SendMailX.Files>
                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="2">
                             <InArgument x:TypeArguments="x:String">[CV_path]</InArgument>
-                            <InArgument x:TypeArguments="x:String">MotivationLetter.txt</InArgument>
+                            <InArgument x:TypeArguments="x:String">Output\MotivationLetter.txt</InArgument>
                           </scg:List>
                         </umab:SendMailX.Files>
                         <umab:SendMailX.HtmlBodyFromFile>
@@ -588,7 +580,7 @@ Le ton doit être professionnel, fluide, sincère et adapté à une candidature 
           </InArgument>
         </umab:GmailApplicationCard.ClientSecret>
       </umab:GmailApplicationCard>
-      <ui:AppendWriteCsvFile FilePath="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[dt_Result]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Save the applied offers for monitoring" sap:VirtualizedContainerService.HintSize="593.6,263.2" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" PathResource="[LocalResource.FromPath(&quot;results.csv&quot;)]" ShouldQuote="True" />
+      <ui:AppendWriteCsvFile FilePath="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[dt_Result]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Save the applied offers for monitoring" sap:VirtualizedContainerService.HintSize="593.6,263.2" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" PathResource="[LocalResource.FromPath(&quot;Output\results.csv&quot;)]" ShouldQuote="True" />
     </Sequence>
   </Sequence>
 </Activity>
