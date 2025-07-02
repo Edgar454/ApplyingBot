@@ -1,0 +1,594 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SéquencePourPostuler" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="SéquencePourPostuler_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C53A85B783F_v2_sub_generateChatCompletion_Create.Bundle;assembly=C53A85B783F_v2_sub_g.U5Zl024vLaM1QGCpYfgxcY4" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>C53A85B783F_v2_sub_g.U5Zl024vLaM1QGCpYfgxcY4</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>C53A85B783F_generate.k3QeM1ZNNuH13H19F1QWihi3</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="SéquencePourPostuler" sap:VirtualizedContainerService.HintSize="755.2,4929.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Offers" />
+      <Variable x:TypeArguments="x:String" Name="MotivationLetterText" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Result" />
+      <Variable x:TypeArguments="x:String" Name="CV_path" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Sequence to apply to a job being given the scrapped CSV . More specifically :&#xA;1- We begin by reading the CV and the offers csv path&#xA;2- Then we generate the cover letter&#xA;3- For each offer, get the information and the generate the mail using AI&#xA;4- Save the progress in a csv for monitoring" DisplayName="Sequence To Apply to job offer from a CSV" sap:VirtualizedContainerService.HintSize="627.2,4875.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="Offers_path" />
+        <Variable x:TypeArguments="x:Boolean" Name="CoverLetterGenerated" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:SelectFile InitialDirectory="{x:Null}" Multiselect="{x:Null}" SelectedFiles="{x:Null}" DisplayName="Browse for the CV" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="593.6,171.2" sap2010:WorkflowViewState.IdRef="SelectFile_2" SelectedFile="[CV_path]" />
+      <ui:SelectFile InitialDirectory="{x:Null}" Multiselect="{x:Null}" SelectedFiles="{x:Null}" DisplayName="Browse for the Offers CSV" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="593.6,171.2" sap2010:WorkflowViewState.IdRef="SelectFile_3" SelectedFile="[Offers_path]" />
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="593.6,597.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+        <TryCatch.Try>
+          <Sequence DisplayName="Essayer" sap:VirtualizedContainerService.HintSize="416,251.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadCsvFile FilePath="{x:Null}" sap2010:Annotation.AnnotationText="" DataTable="[dt_Offers]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read the offers csv" sap:VirtualizedContainerService.HintSize="382.4,191.2" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" PathResource="[LocalResource.FromPath(Offers_path)]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ReadCsvFile>
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+        <TryCatch.Finally>
+          <Sequence DisplayName="Enfin" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </TryCatch.Finally>
+      </TryCatch>
+      <ui:BuildDataTable DataTable="[dt_Result]" DisplayName="Build the result table" sap:VirtualizedContainerService.HintSize="593.6,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date_Candidature&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Derniere_Date_De_Relance&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="593.6,787.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:01:00">
+        <ui:RetryScope.ActivityBody>
+          <ActivityAction>
+            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="449.6,579.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <isactr:ConnectorActivity Configuration="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" ConnectionId="c5b52d19-66f1-432f-b1b8-3753a85b783f" DisplayName="Generate the Cover letter text" sap:VirtualizedContainerService.HintSize="416,519.2" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+                <isactr:ConnectorActivity.FieldObjects>
+                  <isactr:FieldObject Name="modelName" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">gpt-4o-2024-11-20</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String" xml:space="preserve">En te basant sur le CV fourni, rédige une lettre de motivation professionnelle, engageante et passionnée, destinée à une offre dans le même domaine que celui du profil du candidat (emploi ou stage selon le niveau d'expérience détecté dans le CV).
+
+Contraintes à respecter :
+
+Le nom de l’entreprise doit apparaître sous la forme &lt;ENTREPRISE&gt;
+
+La date doit apparaître sous la forme &lt;DATE&gt;
+
+Structure attendue :
+
+Informations personnelles du candidat en en-tête : nom, ville, téléphone, email
+
+Ligne de date : &lt;DATE&gt;
+
+Objet : clair, adapté au domaine du candidat (par exemple, 'Candidature pour un stage en [domaine]')
+
+Nom de l’entreprise : &lt;ENTREPRISE&gt;
+
+Formule d’appel : 'Madame, Monsieur,'
+
+Corps de la lettre :
+
+Une introduction motivée
+
+Une mise en valeur des expériences professionnelles, des projets académiques, des compétences, des outils maîtrisés et des certifications pertinentes
+
+Une phrase exprimant l’intérêt du candidat à contribuer aux projets de l’entreprise
+
+Une proposition d’entretien
+
+Signature : nom complet du candidat
+
+Le ton doit être professionnel, fluide, sincère et adapté à une candidature réelle. La lettre doit pouvoir être utilisée telle quelle, sans nécessiter de réécriture manuelle.
+
+</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+                  <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+                  <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+                  <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+                  <isactr:FieldObject Name="topK" Type="FieldArgument" />
+                  <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">File resource</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="_file" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath(CV_path)]</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+                  <isactr:FieldObject Name="topP" Type="FieldArgument" />
+                  <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+                  <isactr:FieldObject Name="numberOfResults" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">3</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="top_p" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String">Tu es un guide carrière qui aide les candidats à se présenter sous leur meilleur jour en écrivant les documents les plus engageants possibles.</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="temperature" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Double">0</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="n" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="_stop" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <InArgument x:TypeArguments="x:String" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="x:String">[MotivationLetterText]</OutArgument>
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                  <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+                    <isactr:FieldObject.Value>
+                      <OutArgument x:TypeArguments="x:String" />
+                    </isactr:FieldObject.Value>
+                  </isactr:FieldObject>
+                </isactr:ConnectorActivity.FieldObjects>
+              </isactr:ConnectorActivity>
+            </Sequence>
+          </ActivityAction>
+        </ui:RetryScope.ActivityBody>
+        <ui:RetryScope.Condition>
+          <ActivityFunc x:TypeArguments="x:Boolean" />
+        </ui:RetryScope.Condition>
+      </ui:RetryScope>
+      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="mevaed4@gmail.com" DisplayName="Use Gmail" EmailAddress="mevaed4@gmail.com" sap:VirtualizedContainerService.HintSize="593.6,2617.6" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+        <umab:GmailApplicationCard.Body>
+          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="560,2404" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Offers]" DisplayName="For Each Offer" sap:VirtualizedContainerService.HintSize="526.4,2344" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Offer" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="524.8,2171.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Company" />
+                        <Variable x:TypeArguments="x:String" Name="Mail" />
+                        <Variable x:TypeArguments="x:String" Name="Fonction" />
+                        <Variable x:TypeArguments="x:String" Name="EmailText" />
+                        <Variable x:TypeArguments="x:String" Name="Field" />
+                        <Variable x:TypeArguments="x:String" Name="Job" />
+                        <Variable x:TypeArguments="x:String" Name="TodayDate" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:MultipleAssign DisplayName="Assign to get the offers infos" sap:VirtualizedContainerService.HintSize="491.2,304.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                        <ui:MultipleAssign.AssignOperations>
+                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Company]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Offer("SOCIETE").ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Mail]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Offer("E-mail").ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Fonction]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Offer("FONCTION / SERVICE").ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Field]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">génie civil</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[Job]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">un stage</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                              <ui:AssignOperation.To>
+                                <OutArgument x:TypeArguments="x:String">[TodayDate]</OutArgument>
+                              </ui:AssignOperation.To>
+                              <ui:AssignOperation.Value>
+                                <InArgument x:TypeArguments="x:String">[Date.Today.ToString]</InArgument>
+                              </ui:AssignOperation.Value>
+                            </ui:AssignOperation>
+                          </scg:List>
+                        </ui:MultipleAssign.AssignOperations>
+                      </ui:MultipleAssign>
+                      <ui:Replace BuilderPattern="&lt;DATE&gt;" DisplayName="Replace the date placeholde in the cover letter" sap:VirtualizedContainerService.HintSize="491.2,92" sap2010:WorkflowViewState.IdRef="Replace_3" Input="[MotivationLetterText]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Littéral&quot;,&quot;OperationValue&quot;:&quot;&lt;DATE&gt;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactement&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="&lt;DATE&gt;" RegexOption="IgnoreCase, Compiled" Replacement="[TodayDate]" />
+                      <ui:Replace BuilderPattern="&lt;DATE&gt;" DisplayName="Replace the company placeholder in the cover letter" sap:VirtualizedContainerService.HintSize="491.2,92" sap2010:WorkflowViewState.IdRef="Replace_4" Input="[MotivationLetterText]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Littéral&quot;,&quot;OperationValue&quot;:&quot;&lt;DATE&gt;&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactement&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="&lt;ENTREPRISE&gt;" RegexOption="IgnoreCase, Compiled" Replacement="[Company]" />
+                      <ui:WriteTextFile File="{x:Null}" DisplayName="Save the placeholder in a file" FileName="MotivationLetter.txt" sap:VirtualizedContainerService.HintSize="491.2,166.4" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[MotivationLetterText]" />
+                      <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="491.2,787.2" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:01:00">
+                        <ui:RetryScope.ActivityBody>
+                          <ActivityAction>
+                            <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="449.6,579.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <isactr:ConnectorActivity Configuration="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" ConnectionId="c5b52d19-66f1-432f-b1b8-3753a85b783f" DisplayName="Generate the mail content" sap:VirtualizedContainerService.HintSize="416,519.2" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+                                <isactr:ConnectorActivity.FieldObjects>
+                                  <isactr:FieldObject Name="modelName" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:String">gpt-4o-2024-11-20</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:String">["En te basant sur le CV et la lettre de motivation fournis, rédige un mail de candidature très court, professionnel et sans objet pour postuler à un stage chez " &amp; Company &amp; ". Utilise les informations personnelles (nom, prénom, contact) directement issues du CV. Le mail doit être une introduction simple, polie et engageante, incluant une phrase exprimant l’intérêt spécifique du candidat pour l’entreprise ou le stage, tout en invitant le recruteur à consulter les documents joints et à contacter le candidat. Ne répète pas les expériences ou détails, le mail doit être prêt à être envoyé directement."]</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="topK" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:String">File resource</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="_file" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath(CV_path)]</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="topP" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+                                  <isactr:FieldObject Name="numberOfResults" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="top_p" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:String">Tu es un redacteur d'email qui assiste les candidats dans leurs tentatives de postultat</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Int64" />
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="temperature" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Double">0</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="n" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="_stop" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <InArgument x:TypeArguments="x:String" />
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <OutArgument x:TypeArguments="x:String">[EmailText]</OutArgument>
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <OutArgument x:TypeArguments="x:String" />
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                  <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+                                    <isactr:FieldObject.Value>
+                                      <OutArgument x:TypeArguments="x:String" />
+                                    </isactr:FieldObject.Value>
+                                  </isactr:FieldObject>
+                                </isactr:ConnectorActivity.FieldObjects>
+                              </isactr:ConnectorActivity>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:RetryScope.ActivityBody>
+                        <ui:RetryScope.Condition>
+                          <ActivityFunc x:TypeArguments="x:Boolean" />
+                        </ui:RetryScope.Condition>
+                      </ui:RetryScope>
+                      <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[EmailText]" BodyType="Text" DisplayName="Send the Email" sap:VirtualizedContainerService.HintSize="491.2,457.6" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[String.Format(&quot;Objet : Candidature pour {0} en {1} chez {2}&quot;, Job, Field, Company)]" To="[Mail]" UseDocumentAsBody="False">
+                        <umab:SendMailX.Files>
+                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="2">
+                            <InArgument x:TypeArguments="x:String">[CV_path]</InArgument>
+                            <InArgument x:TypeArguments="x:String">MotivationLetter.txt</InArgument>
+                          </scg:List>
+                        </umab:SendMailX.Files>
+                        <umab:SendMailX.HtmlBodyFromFile>
+                          <umabh:HtmlContentArgument FilePath="{x:Null}" HtmlBody="{x:Null}">
+                            <umabh:HtmlContentArgument.RuntimeImages>
+                              <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                            </umabh:HtmlContentArgument.RuntimeImages>
+                            <umabh:HtmlContentArgument.ValueMappings>
+                              <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                            </umabh:HtmlContentArgument.ValueMappings>
+                          </umabh:HtmlContentArgument>
+                        </umab:SendMailX.HtmlBodyFromFile>
+                      </umab:SendMailX>
+                      <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Mail,TodayDate,&quot;none&quot;,&quot;Success&quot;}]" DataTable="[dt_Result]" DisplayName="Save the applied offer details for monitoring" sap:VirtualizedContainerService.HintSize="491.2,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+            </Sequence>
+          </ActivityAction>
+        </umab:GmailApplicationCard.Body>
+        <umab:GmailApplicationCard.ClientId>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </umab:GmailApplicationCard.ClientId>
+        <umab:GmailApplicationCard.ClientSecret>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </umab:GmailApplicationCard.ClientSecret>
+      </umab:GmailApplicationCard>
+      <ui:AppendWriteCsvFile FilePath="{x:Null}" AddHeaders="True" CsvAction="Write" DataTable="[dt_Result]" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Save the applied offers for monitoring" sap:VirtualizedContainerService.HintSize="593.6,263.2" sap2010:WorkflowViewState.IdRef="AppendWriteCsvFile_2" PathResource="[LocalResource.FromPath(&quot;results.csv&quot;)]" ShouldQuote="True" />
+    </Sequence>
+  </Sequence>
+</Activity>
